@@ -13,7 +13,7 @@ if not TELEGRAM_TOKEN or not GEMINI_API_KEY:
 # GOOGLE GEMINI SOZLASI
 genai.configure(api_key=GEMINI_API_KEY)
 # Pro modeli barqaror ishlaydi
-model = genai.GenerativeModel('gemini-1.0-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 # TELEGRAM BOT SOZLASI
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
