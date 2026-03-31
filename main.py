@@ -3,20 +3,20 @@ import telebot
 import google.generativeai as genai
 
 # SOZLAMALAR
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
-GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+TELEGRAM_TOKEN = '8755643277:AAEdLlmZAG2jgEaO3IHh31LRJk0XfJ6aI6o'
+GEMINI_API_KEY = 'AIzaSyDc8M5vYtKyr5qbun7YgIsin4Kepke7e6Y'  
 
 if not TELEGRAM_TOKEN or not GEMINI_API_KEY:
     print("XATO: TELEGRAM_TOKEN yoki GEMINI_API_KEY topilmadi!")
     exit()
 
 # GOOGLE GEMINI SOZLASI
-genai.configure(api_key=GEMINI_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY
 # Pro modeli barqaror ishlaydi
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # TELEGRAM BOT SOZLASI
-bot = telebot.TeleBot(TELEGRAM_TOKEN)
+bot = telebot.TeleBot(TELEGRAM_TOKEN) 
 
 # BOT LOGIKASI
 @bot.message_handler(commands=['start', 'help'])
